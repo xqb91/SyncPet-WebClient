@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://servicios/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servicios/">
+
+<xs:element name="caracter" type="tns:caracter"/>
+
+<xs:element name="clinica" type="tns:clinica"/>
+
+<xs:element name="comuna" type="tns:comuna"/>
+
+<xs:element name="especie" type="tns:especie"/>
+
+<xs:element name="habitad" type="tns:habitad"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="listadoCaracter" type="tns:listadoCaracter"/>
+
+<xs:element name="listadoCaracterResponse" type="tns:listadoCaracterResponse"/>
+
+<xs:element name="listadoGruposSanguineos" type="tns:listadoGruposSanguineos"/>
+
+<xs:element name="listadoGruposSanguineosResponse" type="tns:listadoGruposSanguineosResponse"/>
+
+<xs:element name="listadoMascotasPorPropietario" type="tns:listadoMascotasPorPropietario"/>
+
+<xs:element name="listadoMascotasPorPropietarioResponse" type="tns:listadoMascotasPorPropietarioResponse"/>
+
+<xs:element name="listadoRazas" type="tns:listadoRazas"/>
+
+<xs:element name="listadoRazasResponse" type="tns:listadoRazasResponse"/>
+
+<xs:element name="mascota" type="tns:mascota"/>
+
+<xs:element name="pais" type="tns:pais"/>
+
+<xs:element name="propietario" type="tns:propietario"/>
+
+<xs:element name="provincia" type="tns:provincia"/>
+
+<xs:element name="raza" type="tns:raza"/>
+
+<xs:element name="region" type="tns:region"/>
+
+<xs:element name="registrarMascota" type="tns:registrarMascota"/>
+
+<xs:element name="registrarMascotaResponse" type="tns:registrarMascotaResponse"/>
+
+<xs:element name="sucursal" type="tns:sucursal"/>
+
+<xs:complexType name="listadoRazas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listadoRazasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:raza" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="raza">
+<xs:sequence>
+<xs:element name="especie" type="tns:especie" minOccurs="0"/>
+<xs:element name="idRaza" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="especie">
+<xs:sequence>
+<xs:element name="familia" type="xs:string" minOccurs="0"/>
+<xs:element name="idEspecie" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarMascota">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="fecnac" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="sexo" type="xs:unsignedShort"/>
+<xs:element name="nroChip" type="xs:int"/>
+<xs:element name="propietario" type="xs:int"/>
+<xs:element name="raza" type="xs:int"/>
+<xs:element name="caracter" type="xs:int"/>
+<xs:element name="habitad" type="xs:int"/>
+<xs:element name="grupoSanguineo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarMascotaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listadoMascotasPorPropietario">
+<xs:sequence>
+<xs:element name="propietario" type="tns:propietario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="propietario">
+<xs:sequence>
+<xs:element name="amaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="apaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="celular" type="xs:int" minOccurs="0"/>
+<xs:element name="comuna" type="tns:comuna" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="dv" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="idPropietario" type="xs:int" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="rut" type="xs:int"/>
+<xs:element name="sucursal" type="tns:sucursal" minOccurs="0"/>
+<xs:element name="telefono" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="comuna">
+<xs:sequence>
+<xs:element name="idComuna" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="provincia" type="tns:provincia" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="provincia">
+<xs:sequence>
+<xs:element name="idProvincia" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="region" type="tns:region" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="region">
+<xs:sequence>
+<xs:element name="idRegion" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="pais" type="tns:pais" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pais">
+<xs:sequence>
+<xs:element name="idPais" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sucursal">
+<xs:sequence>
+<xs:element name="clinica" type="tns:clinica" minOccurs="0"/>
+<xs:element name="comuna" type="tns:comuna" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="idSucursal" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clinica">
+<xs:sequence>
+<xs:element name="dv" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="idClinica" type="xs:int" minOccurs="0"/>
+<xs:element name="nombreFantasia" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreReal" type="xs:string" minOccurs="0"/>
+<xs:element name="rut" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listadoMascotasPorPropietarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:mascota" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mascota">
+<xs:sequence>
+<xs:element name="caracter" type="tns:caracter" minOccurs="0"/>
+<xs:element name="defuncion" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fechaNacimiento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="foto" type="xs:string" minOccurs="0"/>
+<xs:element name="grupoSanguineo" type="xs:string" minOccurs="0"/>
+<xs:element name="habitad" type="tns:habitad" minOccurs="0"/>
+<xs:element name="idMascota" type="xs:int" minOccurs="0"/>
+<xs:element name="madre" type="tns:mascota" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroChip" type="xs:int" minOccurs="0"/>
+<xs:element name="padre" type="tns:mascota" minOccurs="0"/>
+<xs:element name="peso" type="xs:integer" minOccurs="0"/>
+<xs:element name="propietario" type="tns:propietario" minOccurs="0"/>
+<xs:element name="raza" type="tns:raza" minOccurs="0"/>
+<xs:element name="sexo" type="xs:unsignedShort" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="caracter">
+<xs:sequence>
+<xs:element name="idCaracter" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="habitad">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="idHabitad" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listadoCaracter">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listadoCaracterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:caracter" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listadoGruposSanguineos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listadoGruposSanguineosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
