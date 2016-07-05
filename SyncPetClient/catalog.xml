@@ -10,14 +10,14 @@
     <system systemId="http://localhost:8080/SyncPetWebSource/SrvMascotas?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetWebSource/SrvMascotas.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/SyncPetWebSource/SrvAgendamiento?wsdl" uri="src/conf/xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetWebSource/SrvAgendamiento.wsdl"/>
     <system systemId="http://localhost:8080/SyncPetWebSource/SrvAgendamiento?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetWebSource/SrvAgendamiento.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl" uri="src/conf/xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetServices/SrvPropietarios.wsdl"/>
-    <system systemId="http://localhost:8080/SyncPetServices/SrvPropietarios?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetServices/SrvPropietarios.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/SyncPetServices/SrvMascotas?wsdl" uri="src/conf/xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetServices/SrvMascotas.wsdl"/>
     <system systemId="http://localhost:8080/SyncPetServices/SrvMascotas?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetServices/SrvMascotas.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/SyncPetServices/SrvAgendamiento?wsdl" uri="src/conf/xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetServices/SrvAgendamiento.wsdl"/>
-    <system systemId="http://localhost:8080/SyncPetServices/SrvAgendamiento?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetServices/SrvAgendamiento.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/SyncPetServices/SrvCiudades?wsdl" uri="src/conf/xml-resources/web-service-references/SrvCiudades/wsdl/localhost_8080/SyncPetServices/SrvCiudades.wsdl"/>
     <system systemId="http://localhost:8080/SyncPetServices/SrvCiudades?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvCiudades/wsdl/localhost_8080/SyncPetServices/SrvCiudades.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/SyncPetServices/srvClinica?wsdl" uri="src/conf/xml-resources/web-service-references/srvClinica/wsdl/localhost_8080/SyncPetServices/srvClinica.wsdl"/>
     <system systemId="http://localhost:8080/SyncPetServices/srvClinica?xsd=1" uri="src/conf/xml-resources/web-service-references/srvClinica/wsdl/localhost_8080/SyncPetServices/srvClinica.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/SyncPetServices/SrvAgendamiento?wsdl" uri="src/conf/xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetServices/SrvAgendamiento.wsdl"/>
+    <system systemId="http://localhost:8080/SyncPetServices/SrvAgendamiento?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetServices/SrvAgendamiento.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl" uri="src/conf/xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetServices/SrvPropietarios.wsdl"/>
+    <system systemId="http://localhost:8080/SyncPetServices/SrvPropietarios?xsd=1" uri="src/conf/xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetServices/SrvPropietarios.xsd_1.xsd"/>
 </catalog>

@@ -143,7 +143,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#" title="Volver al Home">
-                    <img src="imagenes/logo_aplicacion_slide.png" width="25%" alt="Home" title="Volver al Home" />
+                    <img src="imagenes/logoWebClient.png" width="25%" alt="Home" title="Volver al Home" />
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -291,7 +291,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; 2016 StarLabs :: Creado por Victor Araya y Alejandro Astroza</p>
+                    <p>Copyright &copy; 2016 StarLabs Syncpet WebClient :: Powered by Alejandro Astroza & Victor Araya</p>
                 </div>
             </div>
         </footer>
@@ -305,7 +305,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel"><img src="imagenes/logo_aplicacion_slide.png" width="15%" alt="Home" title="Volver al Home" /> Registro de Paciente</h4>
+                    <h4 class="modal-title" id="myModalLabel"><img src="imagenes/logoWebClient.png" width="15%" alt="Home" title="Volver al Home" /> Registro de Paciente</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">

@@ -40,6 +40,36 @@ public interface SrvAgendamiento {
 
     /**
      * 
+     * @param pro
+     * @return
+     *     returns servicios.Agenda
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "ultimoEventoRegistrado", targetNamespace = "http://servicios/", className = "servicios.UltimoEventoRegistrado")
+    @ResponseWrapper(localName = "ultimoEventoRegistradoResponse", targetNamespace = "http://servicios/", className = "servicios.UltimoEventoRegistradoResponse")
+    @Action(input = "http://servicios/SrvAgendamiento/ultimoEventoRegistradoRequest", output = "http://servicios/SrvAgendamiento/ultimoEventoRegistradoResponse")
+    public Agenda ultimoEventoRegistrado(
+        @WebParam(name = "pro", targetNamespace = "")
+        Propietario pro);
+
+    /**
+     * 
+     * @param pro
+     * @return
+     *     returns servicios.AgendaDetalle
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "detalleUltimoEventoRegistrado", targetNamespace = "http://servicios/", className = "servicios.DetalleUltimoEventoRegistrado")
+    @ResponseWrapper(localName = "detalleUltimoEventoRegistradoResponse", targetNamespace = "http://servicios/", className = "servicios.DetalleUltimoEventoRegistradoResponse")
+    @Action(input = "http://servicios/SrvAgendamiento/detalleUltimoEventoRegistradoRequest", output = "http://servicios/SrvAgendamiento/detalleUltimoEventoRegistradoResponse")
+    public AgendaDetalle detalleUltimoEventoRegistrado(
+        @WebParam(name = "pro", targetNamespace = "")
+        Propietario pro);
+
+    /**
+     * 
      * @param name
      * @return
      *     returns java.lang.String
@@ -52,6 +82,21 @@ public interface SrvAgendamiento {
     public String hello(
         @WebParam(name = "name", targetNamespace = "")
         String name);
+
+    /**
+     * 
+     * @param fecha
+     * @return
+     *     returns java.util.List<servicios.Agenda>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "horasOcupadas", targetNamespace = "http://servicios/", className = "servicios.HorasOcupadas")
+    @ResponseWrapper(localName = "horasOcupadasResponse", targetNamespace = "http://servicios/", className = "servicios.HorasOcupadasResponse")
+    @Action(input = "http://servicios/SrvAgendamiento/horasOcupadasRequest", output = "http://servicios/SrvAgendamiento/horasOcupadasResponse")
+    public List<Agenda> horasOcupadas(
+        @WebParam(name = "fecha", targetNamespace = "")
+        XMLGregorianCalendar fecha);
 
     /**
      * 
@@ -76,20 +121,5 @@ public interface SrvAgendamiento {
         int veterinario,
         @WebParam(name = "paciente", targetNamespace = "")
         int paciente);
-
-    /**
-     * 
-     * @param fecha
-     * @return
-     *     returns java.util.List<servicios.Agenda>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "horasOcupadas", targetNamespace = "http://servicios/", className = "servicios.HorasOcupadas")
-    @ResponseWrapper(localName = "horasOcupadasResponse", targetNamespace = "http://servicios/", className = "servicios.HorasOcupadasResponse")
-    @Action(input = "http://servicios/SrvAgendamiento/horasOcupadasRequest", output = "http://servicios/SrvAgendamiento/horasOcupadasResponse")
-    public List<Agenda> horasOcupadas(
-        @WebParam(name = "fecha", targetNamespace = "")
-        XMLGregorianCalendar fecha);
 
 }

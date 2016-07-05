@@ -10,17 +10,23 @@
 <message name="listaVeterinariosResponse">
 <part name="parameters" element="tns:listaVeterinariosResponse"/>
 </message>
+<message name="ultimoEventoRegistrado">
+<part name="parameters" element="tns:ultimoEventoRegistrado"/>
+</message>
+<message name="ultimoEventoRegistradoResponse">
+<part name="parameters" element="tns:ultimoEventoRegistradoResponse"/>
+</message>
+<message name="detalleUltimoEventoRegistrado">
+<part name="parameters" element="tns:detalleUltimoEventoRegistrado"/>
+</message>
+<message name="detalleUltimoEventoRegistradoResponse">
+<part name="parameters" element="tns:detalleUltimoEventoRegistradoResponse"/>
+</message>
 <message name="hello">
 <part name="parameters" element="tns:hello"/>
 </message>
 <message name="helloResponse">
 <part name="parameters" element="tns:helloResponse"/>
-</message>
-<message name="agendarHorario">
-<part name="parameters" element="tns:agendarHorario"/>
-</message>
-<message name="agendarHorarioResponse">
-<part name="parameters" element="tns:agendarHorarioResponse"/>
 </message>
 <message name="horasOcupadas">
 <part name="parameters" element="tns:horasOcupadas"/>
@@ -28,22 +34,36 @@
 <message name="horasOcupadasResponse">
 <part name="parameters" element="tns:horasOcupadasResponse"/>
 </message>
+<message name="agendarHorario">
+<part name="parameters" element="tns:agendarHorario"/>
+</message>
+<message name="agendarHorarioResponse">
+<part name="parameters" element="tns:agendarHorarioResponse"/>
+</message>
 <portType name="SrvAgendamiento">
 <operation name="listaVeterinarios">
 <input wsam:Action="http://servicios/SrvAgendamiento/listaVeterinariosRequest" message="tns:listaVeterinarios"/>
 <output wsam:Action="http://servicios/SrvAgendamiento/listaVeterinariosResponse" message="tns:listaVeterinariosResponse"/>
 </operation>
+<operation name="ultimoEventoRegistrado">
+<input wsam:Action="http://servicios/SrvAgendamiento/ultimoEventoRegistradoRequest" message="tns:ultimoEventoRegistrado"/>
+<output wsam:Action="http://servicios/SrvAgendamiento/ultimoEventoRegistradoResponse" message="tns:ultimoEventoRegistradoResponse"/>
+</operation>
+<operation name="detalleUltimoEventoRegistrado">
+<input wsam:Action="http://servicios/SrvAgendamiento/detalleUltimoEventoRegistradoRequest" message="tns:detalleUltimoEventoRegistrado"/>
+<output wsam:Action="http://servicios/SrvAgendamiento/detalleUltimoEventoRegistradoResponse" message="tns:detalleUltimoEventoRegistradoResponse"/>
+</operation>
 <operation name="hello">
 <input wsam:Action="http://servicios/SrvAgendamiento/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://servicios/SrvAgendamiento/helloResponse" message="tns:helloResponse"/>
 </operation>
-<operation name="agendarHorario">
-<input wsam:Action="http://servicios/SrvAgendamiento/agendarHorarioRequest" message="tns:agendarHorario"/>
-<output wsam:Action="http://servicios/SrvAgendamiento/agendarHorarioResponse" message="tns:agendarHorarioResponse"/>
-</operation>
 <operation name="horasOcupadas">
 <input wsam:Action="http://servicios/SrvAgendamiento/horasOcupadasRequest" message="tns:horasOcupadas"/>
 <output wsam:Action="http://servicios/SrvAgendamiento/horasOcupadasResponse" message="tns:horasOcupadasResponse"/>
+</operation>
+<operation name="agendarHorario">
+<input wsam:Action="http://servicios/SrvAgendamiento/agendarHorarioRequest" message="tns:agendarHorario"/>
+<output wsam:Action="http://servicios/SrvAgendamiento/agendarHorarioResponse" message="tns:agendarHorarioResponse"/>
 </operation>
 </portType>
 <binding name="SrvAgendamientoPortBinding" type="tns:SrvAgendamiento">
@@ -57,6 +77,24 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="ultimoEventoRegistrado">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="detalleUltimoEventoRegistrado">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="hello">
 <soap:operation soapAction=""/>
 <input>
@@ -66,7 +104,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="agendarHorario">
+<operation name="horasOcupadas">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -75,7 +113,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="horasOcupadas">
+<operation name="agendarHorario">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

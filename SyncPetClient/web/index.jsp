@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#" title="Volver al Home">
-                    <img src="imagenes/logo_aplicacion_slide.png" width="25%" alt="Home" title="Volver al Home" />
+                    <img src="imagenes/logoWebClient.png" width="25%" alt="Home" title="Volver al Home" />
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,14 +69,14 @@
         <!-- Heading Row -->
         <div class="row">
             <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="imagenes/logo_aplicacion_slide.png" alt="">
+                <img class="img-responsive img-rounded" src="imagenes/logoWebClient.png" alt="">
             </div>
             <!-- /.col-md-8 -->
             <div class="col-md-4">
                 <h2>Toma de Horas en Línea</h2>
                 <p align="justify">Bienvenido al sistema de toma de horas en línea para pacientes. Para comenzar, elija la opción que desee en los botones que encontrará a continuación.</p>
                 <a class="btn btn-primary btn" href="reservar"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Reservar Hora</a>
-                <a class="btn btn-primary btn" href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultar Reserva</a>
+                <a class="btn btn-primary btn" href="consulta.jsp"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultar Reserva</a>
             </div>
             <!-- /.col-md-4 -->
         </div>
@@ -88,7 +88,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; 2016 StarLabs :: Creado por Victor Araya y Alejandro Astroza</p>
+                    <p>Copyright &copy; 2016 StarLabs Syncpet WebClient :: Powered by Alejandro Astroza & Victor Araya</p>
                 </div>
             </div>
         </footer>
