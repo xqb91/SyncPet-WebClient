@@ -40,6 +40,12 @@
 <message name="listadoGruposSanguineosResponse">
 <part name="parameters" element="tns:listadoGruposSanguineosResponse"/>
 </message>
+<message name="buscarMascotaById">
+<part name="parameters" element="tns:buscarMascotaById"/>
+</message>
+<message name="buscarMascotaByIdResponse">
+<part name="parameters" element="tns:buscarMascotaByIdResponse"/>
+</message>
 <portType name="SrvMascotas">
 <operation name="hello">
 <input wsam:Action="http://servicios/SrvMascotas/helloRequest" message="tns:hello"/>
@@ -64,6 +70,10 @@
 <operation name="listadoGruposSanguineos">
 <input wsam:Action="http://servicios/SrvMascotas/listadoGruposSanguineosRequest" message="tns:listadoGruposSanguineos"/>
 <output wsam:Action="http://servicios/SrvMascotas/listadoGruposSanguineosResponse" message="tns:listadoGruposSanguineosResponse"/>
+</operation>
+<operation name="buscarMascotaById">
+<input wsam:Action="http://servicios/SrvMascotas/buscarMascotaByIdRequest" message="tns:buscarMascotaById"/>
+<output wsam:Action="http://servicios/SrvMascotas/buscarMascotaByIdResponse" message="tns:buscarMascotaByIdResponse"/>
 </operation>
 </portType>
 <binding name="SrvMascotasPortBinding" type="tns:SrvMascotas">
@@ -114,6 +124,15 @@
 </output>
 </operation>
 <operation name="listadoGruposSanguineos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="buscarMascotaById">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

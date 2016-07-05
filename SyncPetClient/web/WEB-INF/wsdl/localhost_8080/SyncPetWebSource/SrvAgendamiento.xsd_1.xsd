@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://servicios/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servicios/">
+
+<xs:element name="agenda" type="tns:agenda"/>
+
+<xs:element name="agendarHorario" type="tns:agendarHorario"/>
+
+<xs:element name="agendarHorarioResponse" type="tns:agendarHorarioResponse"/>
+
+<xs:element name="clinica" type="tns:clinica"/>
+
+<xs:element name="comuna" type="tns:comuna"/>
+
+<xs:element name="detalleUsuarios" type="tns:detalleUsuarios"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="horasOcupadas" type="tns:horasOcupadas"/>
+
+<xs:element name="horasOcupadasResponse" type="tns:horasOcupadasResponse"/>
+
+<xs:element name="listaVeterinarios" type="tns:listaVeterinarios"/>
+
+<xs:element name="listaVeterinariosResponse" type="tns:listaVeterinariosResponse"/>
+
+<xs:element name="pais" type="tns:pais"/>
+
+<xs:element name="perfiles" type="tns:perfiles"/>
+
+<xs:element name="provincia" type="tns:provincia"/>
+
+<xs:element name="region" type="tns:region"/>
+
+<xs:element name="sucursal" type="tns:sucursal"/>
+
+<xs:element name="usuarios" type="tns:usuarios"/>
+
+<xs:element name="veterinario" type="tns:veterinario"/>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="horasOcupadas">
+<xs:sequence>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="horasOcupadasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:agenda" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agenda">
+<xs:sequence>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="fechaEvento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="idEvento" type="xs:int" minOccurs="0"/>
+<xs:element name="sucursal" type="tns:sucursal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sucursal">
+<xs:sequence>
+<xs:element name="clinica" type="tns:clinica" minOccurs="0"/>
+<xs:element name="comuna" type="tns:comuna" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="idSucursal" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clinica">
+<xs:sequence>
+<xs:element name="dv" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="idClinica" type="xs:int" minOccurs="0"/>
+<xs:element name="nombreFantasia" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreReal" type="xs:string" minOccurs="0"/>
+<xs:element name="rut" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="comuna">
+<xs:sequence>
+<xs:element name="idComuna" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="provincia" type="tns:provincia" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="provincia">
+<xs:sequence>
+<xs:element name="idProvincia" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="region" type="tns:region" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="region">
+<xs:sequence>
+<xs:element name="idRegion" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="pais" type="tns:pais" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pais">
+<xs:sequence>
+<xs:element name="idPais" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaVeterinarios">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listaVeterinariosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:detalleUsuarios" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detalleUsuarios">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="sucursal" type="tns:sucursal" minOccurs="0"/>
+<xs:element name="usuario" type="tns:usuarios" minOccurs="0"/>
+<xs:element name="veterinario" type="tns:veterinario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuarios">
+<xs:sequence>
+<xs:element name="amaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="apaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="bloqueado" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="contrasena" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="perfil" type="tns:perfiles" minOccurs="0"/>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="perfiles">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="perfil" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="veterinario">
+<xs:sequence>
+<xs:element name="amaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="apaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="dv" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="especialidad" type="xs:string" minOccurs="0"/>
+<xs:element name="idVeterinario" type="xs:int" minOccurs="0"/>
+<xs:element name="nombres" type="xs:string" minOccurs="0"/>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agendarHorario">
+<xs:sequence>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="sucursal" type="xs:int"/>
+<xs:element name="veterinario" type="xs:int"/>
+<xs:element name="paciente" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agendarHorarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

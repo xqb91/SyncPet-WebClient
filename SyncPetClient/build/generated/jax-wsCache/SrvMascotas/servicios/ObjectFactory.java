@@ -24,12 +24,15 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ListadoGruposSanguineos_QNAME = new QName("http://servicios/", "listadoGruposSanguineos");
+    private final static QName _Provincia_QNAME = new QName("http://servicios/", "provincia");
+    private final static QName _BuscarMascotaById_QNAME = new QName("http://servicios/", "buscarMascotaById");
+    private final static QName _Especie_QNAME = new QName("http://servicios/", "especie");
+    private final static QName _RegistrarMascota_QNAME = new QName("http://servicios/", "registrarMascota");
     private final static QName _Mascota_QNAME = new QName("http://servicios/", "mascota");
     private final static QName _RegistrarMascotaResponse_QNAME = new QName("http://servicios/", "registrarMascotaResponse");
-    private final static QName _ListadoGruposSanguineos_QNAME = new QName("http://servicios/", "listadoGruposSanguineos");
     private final static QName _ListadoCaracterResponse_QNAME = new QName("http://servicios/", "listadoCaracterResponse");
     private final static QName _ListadoGruposSanguineosResponse_QNAME = new QName("http://servicios/", "listadoGruposSanguineosResponse");
-    private final static QName _Provincia_QNAME = new QName("http://servicios/", "provincia");
     private final static QName _Pais_QNAME = new QName("http://servicios/", "pais");
     private final static QName _ListadoMascotasPorPropietario_QNAME = new QName("http://servicios/", "listadoMascotasPorPropietario");
     private final static QName _Raza_QNAME = new QName("http://servicios/", "raza");
@@ -39,11 +42,10 @@ public class ObjectFactory {
     private final static QName _ListadoCaracter_QNAME = new QName("http://servicios/", "listadoCaracter");
     private final static QName _Hello_QNAME = new QName("http://servicios/", "hello");
     private final static QName _Region_QNAME = new QName("http://servicios/", "region");
-    private final static QName _Especie_QNAME = new QName("http://servicios/", "especie");
     private final static QName _Habitad_QNAME = new QName("http://servicios/", "habitad");
     private final static QName _ListadoRazas_QNAME = new QName("http://servicios/", "listadoRazas");
-    private final static QName _RegistrarMascota_QNAME = new QName("http://servicios/", "registrarMascota");
     private final static QName _Caracter_QNAME = new QName("http://servicios/", "caracter");
+    private final static QName _BuscarMascotaByIdResponse_QNAME = new QName("http://servicios/", "buscarMascotaByIdResponse");
     private final static QName _Clinica_QNAME = new QName("http://servicios/", "clinica");
     private final static QName _HelloResponse_QNAME = new QName("http://servicios/", "helloResponse");
     private final static QName _Sucursal_QNAME = new QName("http://servicios/", "sucursal");
@@ -54,6 +56,46 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link BuscarMascotaById }
+     * 
+     */
+    public BuscarMascotaById createBuscarMascotaById() {
+        return new BuscarMascotaById();
+    }
+
+    /**
+     * Create an instance of {@link ListadoGruposSanguineos }
+     * 
+     */
+    public ListadoGruposSanguineos createListadoGruposSanguineos() {
+        return new ListadoGruposSanguineos();
+    }
+
+    /**
+     * Create an instance of {@link Provincia }
+     * 
+     */
+    public Provincia createProvincia() {
+        return new Provincia();
+    }
+
+    /**
+     * Create an instance of {@link Especie }
+     * 
+     */
+    public Especie createEspecie() {
+        return new Especie();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarMascota }
+     * 
+     */
+    public RegistrarMascota createRegistrarMascota() {
+        return new RegistrarMascota();
     }
 
     /**
@@ -105,14 +147,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListadoGruposSanguineos }
-     * 
-     */
-    public ListadoGruposSanguineos createListadoGruposSanguineos() {
-        return new ListadoGruposSanguineos();
-    }
-
-    /**
      * Create an instance of {@link ListadoCaracterResponse }
      * 
      */
@@ -129,27 +163,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Provincia }
-     * 
-     */
-    public Provincia createProvincia() {
-        return new Provincia();
-    }
-
-    /**
      * Create an instance of {@link Pais }
      * 
      */
     public Pais createPais() {
         return new Pais();
-    }
-
-    /**
-     * Create an instance of {@link Especie }
-     * 
-     */
-    public Especie createEspecie() {
-        return new Especie();
     }
 
     /**
@@ -169,19 +187,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegistrarMascota }
-     * 
-     */
-    public RegistrarMascota createRegistrarMascota() {
-        return new RegistrarMascota();
-    }
-
-    /**
      * Create an instance of {@link Caracter }
      * 
      */
     public Caracter createCaracter() {
         return new Caracter();
+    }
+
+    /**
+     * Create an instance of {@link BuscarMascotaByIdResponse }
+     * 
+     */
+    public BuscarMascotaByIdResponse createBuscarMascotaByIdResponse() {
+        return new BuscarMascotaByIdResponse();
     }
 
     /**
@@ -249,6 +267,51 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListadoGruposSanguineos }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicios/", name = "listadoGruposSanguineos")
+    public JAXBElement<ListadoGruposSanguineos> createListadoGruposSanguineos(ListadoGruposSanguineos value) {
+        return new JAXBElement<ListadoGruposSanguineos>(_ListadoGruposSanguineos_QNAME, ListadoGruposSanguineos.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Provincia }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicios/", name = "provincia")
+    public JAXBElement<Provincia> createProvincia(Provincia value) {
+        return new JAXBElement<Provincia>(_Provincia_QNAME, Provincia.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarMascotaById }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicios/", name = "buscarMascotaById")
+    public JAXBElement<BuscarMascotaById> createBuscarMascotaById(BuscarMascotaById value) {
+        return new JAXBElement<BuscarMascotaById>(_BuscarMascotaById_QNAME, BuscarMascotaById.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Especie }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicios/", name = "especie")
+    public JAXBElement<Especie> createEspecie(Especie value) {
+        return new JAXBElement<Especie>(_Especie_QNAME, Especie.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarMascota }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicios/", name = "registrarMascota")
+    public JAXBElement<RegistrarMascota> createRegistrarMascota(RegistrarMascota value) {
+        return new JAXBElement<RegistrarMascota>(_RegistrarMascota_QNAME, RegistrarMascota.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Mascota }{@code >}}
      * 
      */
@@ -267,15 +330,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListadoGruposSanguineos }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicios/", name = "listadoGruposSanguineos")
-    public JAXBElement<ListadoGruposSanguineos> createListadoGruposSanguineos(ListadoGruposSanguineos value) {
-        return new JAXBElement<ListadoGruposSanguineos>(_ListadoGruposSanguineos_QNAME, ListadoGruposSanguineos.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ListadoCaracterResponse }{@code >}}
      * 
      */
@@ -291,15 +345,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://servicios/", name = "listadoGruposSanguineosResponse")
     public JAXBElement<ListadoGruposSanguineosResponse> createListadoGruposSanguineosResponse(ListadoGruposSanguineosResponse value) {
         return new JAXBElement<ListadoGruposSanguineosResponse>(_ListadoGruposSanguineosResponse_QNAME, ListadoGruposSanguineosResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Provincia }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicios/", name = "provincia")
-    public JAXBElement<Provincia> createProvincia(Provincia value) {
-        return new JAXBElement<Provincia>(_Provincia_QNAME, Provincia.class, null, value);
     }
 
     /**
@@ -384,15 +429,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Especie }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicios/", name = "especie")
-    public JAXBElement<Especie> createEspecie(Especie value) {
-        return new JAXBElement<Especie>(_Especie_QNAME, Especie.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Habitad }{@code >}}
      * 
      */
@@ -411,21 +447,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarMascota }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicios/", name = "registrarMascota")
-    public JAXBElement<RegistrarMascota> createRegistrarMascota(RegistrarMascota value) {
-        return new JAXBElement<RegistrarMascota>(_RegistrarMascota_QNAME, RegistrarMascota.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Caracter }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://servicios/", name = "caracter")
     public JAXBElement<Caracter> createCaracter(Caracter value) {
         return new JAXBElement<Caracter>(_Caracter_QNAME, Caracter.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarMascotaByIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicios/", name = "buscarMascotaByIdResponse")
+    public JAXBElement<BuscarMascotaByIdResponse> createBuscarMascotaByIdResponse(BuscarMascotaByIdResponse value) {
+        return new JAXBElement<BuscarMascotaByIdResponse>(_BuscarMascotaByIdResponse_QNAME, BuscarMascotaByIdResponse.class, null, value);
     }
 
     /**

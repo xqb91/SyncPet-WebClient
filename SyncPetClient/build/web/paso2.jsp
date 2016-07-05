@@ -221,13 +221,13 @@
                 <h2>Paso 2</h2>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Seleccione su mascota a atender</h3>
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Seleccione el paciente a atender</h3>
                     </div>
                     <div class="panel-body">
-                        <form action="seleccionPaciente" method="post">
+                        <form action="tomarHora" method="post">
                             <div class="form-group">
-                                <label for="txtRut">Rut del Propietario</label>
-                                <select class="form-control">
+                                <label for="txtRut">Pacientes asociados al propietario</label>
+                                <select class="form-control" name="cmbPaciente">
                                     <c:forEach var="ma" items="${listaPacientes}">
                                         <option value="<c:out value="${ma.getIdMascota()}"></c:out>"><c:out value="${ma.getNombre()}"></c:out></option>
                                     </c:forEach>
@@ -239,6 +239,8 @@
                     </div>
                 </div>
             </div>
+                            
+
         </div>
         <!-- /.row -->
 

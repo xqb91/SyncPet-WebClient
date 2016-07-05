@@ -3,9 +3,9 @@
   <services/>
   <clients>
     <client name="srvClinica">
-      <wsdl-url>http://localhost:8080/SyncPetWebSource/srvClinica?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/SyncPetWebSource/srvClinica.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">cl.starlabs.servicios</package-name>
+      <wsdl-url>http://localhost:8080/SyncPetServices/srvClinica?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/SyncPetServices/srvClinica.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">servicios</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -22,7 +22,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/SyncPetWebSource/srvClinica?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/SyncPetServices/srvClinica?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -34,46 +34,14 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>cl.starlabs.servicios</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-    <client name="SrvCiudades">
-      <wsdl-url>http://localhost:8080/SyncPetWebSource/SrvCiudades?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/SyncPetWebSource/SrvCiudades.wsdl</local-wsdl-file>
-      <package-name>servicios</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>fork</wsimport-option-name>
-          <wsimport-option-value>false</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/SyncPetWebSource/SrvCiudades?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
+          <wsimport-option-value>servicios</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>
     <client name="SrvPropietarios">
-      <wsdl-url>http://localhost:8080/SyncPetWebSource/SrvPropietarios?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/SyncPetWebSource/SrvPropietarios.wsdl</local-wsdl-file>
-      <package-name>servicios</package-name>
+      <wsdl-url>http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/SyncPetServices/SrvPropietarios.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">servicios</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -90,7 +58,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/SyncPetWebSource/SrvPropietarios?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -99,13 +67,17 @@
         <wsimport-option>
           <wsimport-option-name>xendorsed</wsimport-option-name>
           <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>servicios</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>
     <client name="SrvMascotas">
-      <wsdl-url>http://localhost:8080/SyncPetWebSource/SrvMascotas?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/SyncPetWebSource/SrvMascotas.wsdl</local-wsdl-file>
-      <package-name>servicios</package-name>
+      <wsdl-url>http://localhost:8080/SyncPetServices/SrvMascotas?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/SyncPetServices/SrvMascotas.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">servicios</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -122,7 +94,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/SyncPetWebSource/SrvMascotas?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/SyncPetServices/SrvMascotas?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -131,6 +103,82 @@
         <wsimport-option>
           <wsimport-option-name>xendorsed</wsimport-option-name>
           <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>servicios</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="SrvAgendamiento">
+      <wsdl-url>http://localhost:8080/SyncPetServices/SrvAgendamiento?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/SyncPetServices/SrvAgendamiento.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">servicios</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/SyncPetServices/SrvAgendamiento?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>servicios</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="SrvCiudades">
+      <wsdl-url>http://localhost:8080/SyncPetServices/SrvCiudades?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/SyncPetServices/SrvCiudades.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">servicios</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/SyncPetServices/SrvCiudades?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>servicios</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>

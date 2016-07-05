@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-srvClinica" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/srvClinica"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/srvClinica" destdir="${build.generated.dir}/jax-wsCache/srvClinica" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/srvClinica/wsdl/localhost_8080/SyncPetWebSource/srvClinica.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetWebSource/srvClinica?wsdl" xnocompile="true" xendorsed="true" package="cl.starlabs.servicios">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/srvClinica/wsdl/localhost_8080/SyncPetWebSource/srvClinica.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/srvClinica" destdir="${build.generated.dir}/jax-wsCache/srvClinica" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/srvClinica/wsdl/localhost_8080/SyncPetServices/srvClinica.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetServices/srvClinica?wsdl" xnocompile="true" xendorsed="true" package="servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/srvClinica/wsdl/localhost_8080/SyncPetServices/srvClinica.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/srvClinica"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -39,29 +39,13 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-srvClinica" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/cl/starlabs/servicios"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/srvClinica"/>
-    </target>
-    <target name="wsimport-client-SrvCiudades" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/SrvCiudades"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvCiudades" destdir="${build.generated.dir}/jax-wsCache/SrvCiudades" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvCiudades/wsdl/localhost_8080/SyncPetWebSource/SrvCiudades.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetWebSource/SrvCiudades?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvCiudades/wsdl/localhost_8080/SyncPetWebSource/SrvCiudades.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/SrvCiudades"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/SrvCiudades">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-SrvCiudades" depends="-init-project">
         <delete dir="${build.generated.sources.dir}/jax-ws/servicios"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/SrvCiudades"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/srvClinica"/>
     </target>
     <target name="wsimport-client-SrvPropietarios" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/SrvPropietarios"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvPropietarios" destdir="${build.generated.dir}/jax-wsCache/SrvPropietarios" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetWebSource/SrvPropietarios.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetWebSource/SrvPropietarios?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetWebSource/SrvPropietarios.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvPropietarios" destdir="${build.generated.dir}/jax-wsCache/SrvPropietarios" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetServices/SrvPropietarios.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl" xnocompile="true" xendorsed="true" package="servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvPropietarios/wsdl/localhost_8080/SyncPetServices/SrvPropietarios.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/SrvPropietarios"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -76,8 +60,8 @@
     </target>
     <target name="wsimport-client-SrvMascotas" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/SrvMascotas"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvMascotas" destdir="${build.generated.dir}/jax-wsCache/SrvMascotas" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetWebSource/SrvMascotas.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetWebSource/SrvMascotas?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetWebSource/SrvMascotas.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvMascotas" destdir="${build.generated.dir}/jax-wsCache/SrvMascotas" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetServices/SrvMascotas.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetServices/SrvMascotas?wsdl" xnocompile="true" xendorsed="true" package="servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvMascotas/wsdl/localhost_8080/SyncPetServices/SrvMascotas.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/SrvMascotas"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -90,5 +74,37 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/servicios"/>
         <delete dir="${build.generated.dir}/jax-wsCache/SrvMascotas"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-srvClinica, wsimport-client-SrvCiudades, wsimport-client-SrvPropietarios, wsimport-client-SrvMascotas"/>
+    <target name="wsimport-client-SrvAgendamiento" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/SrvAgendamiento"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvAgendamiento" destdir="${build.generated.dir}/jax-wsCache/SrvAgendamiento" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetServices/SrvAgendamiento.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetServices/SrvAgendamiento?wsdl" xnocompile="true" xendorsed="true" package="servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvAgendamiento/wsdl/localhost_8080/SyncPetServices/SrvAgendamiento.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/SrvAgendamiento"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/SrvAgendamiento">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-SrvAgendamiento" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servicios"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/SrvAgendamiento"/>
+    </target>
+    <target name="wsimport-client-SrvCiudades" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/SrvCiudades"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SrvCiudades" destdir="${build.generated.dir}/jax-wsCache/SrvCiudades" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SrvCiudades/wsdl/localhost_8080/SyncPetServices/SrvCiudades.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/SyncPetServices/SrvCiudades?wsdl" xnocompile="true" xendorsed="true" package="servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SrvCiudades/wsdl/localhost_8080/SyncPetServices/SrvCiudades.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/SrvCiudades"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/SrvCiudades">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-SrvCiudades" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/servicios"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/SrvCiudades"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-srvClinica, wsimport-client-SrvPropietarios, wsimport-client-SrvMascotas, wsimport-client-SrvAgendamiento, wsimport-client-SrvCiudades"/>
 </project>

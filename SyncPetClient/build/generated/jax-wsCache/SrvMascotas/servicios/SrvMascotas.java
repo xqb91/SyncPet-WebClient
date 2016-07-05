@@ -28,6 +28,48 @@ public interface SrvMascotas {
 
     /**
      * 
+     * @param propietario
+     * @return
+     *     returns java.util.List<servicios.Mascota>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listadoMascotasPorPropietario", targetNamespace = "http://servicios/", className = "servicios.ListadoMascotasPorPropietario")
+    @ResponseWrapper(localName = "listadoMascotasPorPropietarioResponse", targetNamespace = "http://servicios/", className = "servicios.ListadoMascotasPorPropietarioResponse")
+    @Action(input = "http://servicios/SrvMascotas/listadoMascotasPorPropietarioRequest", output = "http://servicios/SrvMascotas/listadoMascotasPorPropietarioResponse")
+    public List<Mascota> listadoMascotasPorPropietario(
+        @WebParam(name = "propietario", targetNamespace = "")
+        Propietario propietario);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<java.lang.Object>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listadoGruposSanguineos", targetNamespace = "http://servicios/", className = "servicios.ListadoGruposSanguineos")
+    @ResponseWrapper(localName = "listadoGruposSanguineosResponse", targetNamespace = "http://servicios/", className = "servicios.ListadoGruposSanguineosResponse")
+    @Action(input = "http://servicios/SrvMascotas/listadoGruposSanguineosRequest", output = "http://servicios/SrvMascotas/listadoGruposSanguineosResponse")
+    public List<Object> listadoGruposSanguineos();
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns servicios.Mascota
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "buscarMascotaById", targetNamespace = "http://servicios/", className = "servicios.BuscarMascotaById")
+    @ResponseWrapper(localName = "buscarMascotaByIdResponse", targetNamespace = "http://servicios/", className = "servicios.BuscarMascotaByIdResponse")
+    @Action(input = "http://servicios/SrvMascotas/buscarMascotaByIdRequest", output = "http://servicios/SrvMascotas/buscarMascotaByIdResponse")
+    public Mascota buscarMascotaById(
+        @WebParam(name = "id", targetNamespace = "")
+        int id);
+
+    /**
+     * 
      * @param name
      * @return
      *     returns java.lang.String
@@ -103,32 +145,5 @@ public interface SrvMascotas {
         int habitad,
         @WebParam(name = "grupoSanguineo", targetNamespace = "")
         String grupoSanguineo);
-
-    /**
-     * 
-     * @param propietario
-     * @return
-     *     returns java.util.List<servicios.Mascota>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listadoMascotasPorPropietario", targetNamespace = "http://servicios/", className = "servicios.ListadoMascotasPorPropietario")
-    @ResponseWrapper(localName = "listadoMascotasPorPropietarioResponse", targetNamespace = "http://servicios/", className = "servicios.ListadoMascotasPorPropietarioResponse")
-    @Action(input = "http://servicios/SrvMascotas/listadoMascotasPorPropietarioRequest", output = "http://servicios/SrvMascotas/listadoMascotasPorPropietarioResponse")
-    public List<Mascota> listadoMascotasPorPropietario(
-        @WebParam(name = "propietario", targetNamespace = "")
-        Propietario propietario);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<java.lang.Object>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listadoGruposSanguineos", targetNamespace = "http://servicios/", className = "servicios.ListadoGruposSanguineos")
-    @ResponseWrapper(localName = "listadoGruposSanguineosResponse", targetNamespace = "http://servicios/", className = "servicios.ListadoGruposSanguineosResponse")
-    @Action(input = "http://servicios/SrvMascotas/listadoGruposSanguineosRequest", output = "http://servicios/SrvMascotas/listadoGruposSanguineosResponse")
-    public List<Object> listadoGruposSanguineos();
 
 }

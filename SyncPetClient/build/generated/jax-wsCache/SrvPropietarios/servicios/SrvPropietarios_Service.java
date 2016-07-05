@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "SrvPropietarios", targetNamespace = "http://servicios/", wsdlLocation = "http://localhost:8080/SyncPetWebSource/SrvPropietarios?wsdl")
+@WebServiceClient(name = "SrvPropietarios", targetNamespace = "http://servicios/", wsdlLocation = "http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl")
 public class SrvPropietarios_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class SrvPropietarios_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/SyncPetWebSource/SrvPropietarios?wsdl");
+            url = new URL("http://localhost:8080/SyncPetServices/SrvPropietarios?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

@@ -27,6 +27,18 @@ public interface SrvCiudades {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<servicios.Comuna>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listaCiudades", targetNamespace = "http://servicios/", className = "servicios.ListaCiudades")
+    @ResponseWrapper(localName = "listaCiudadesResponse", targetNamespace = "http://servicios/", className = "servicios.ListaCiudadesResponse")
+    @Action(input = "http://servicios/SrvCiudades/listaCiudadesRequest", output = "http://servicios/SrvCiudades/listaCiudadesResponse")
+    public List<Comuna> listaCiudades();
+
+    /**
+     * 
      * @param name
      * @return
      *     returns java.lang.String
@@ -39,17 +51,5 @@ public interface SrvCiudades {
     public String hello(
         @WebParam(name = "name", targetNamespace = "")
         String name);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<servicios.Comuna>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listaCiudades", targetNamespace = "http://servicios/", className = "servicios.ListaCiudades")
-    @ResponseWrapper(localName = "listaCiudadesResponse", targetNamespace = "http://servicios/", className = "servicios.ListaCiudadesResponse")
-    @Action(input = "http://servicios/SrvCiudades/listaCiudadesRequest", output = "http://servicios/SrvCiudades/listaCiudadesResponse")
-    public List<Comuna> listaCiudades();
 
 }
